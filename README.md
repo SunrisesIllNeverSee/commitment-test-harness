@@ -5,21 +5,29 @@ This project implements a test harness for evaluating the conservation of commit
 ## Project Structure
 
 ```
-commitment-test-harness
-├── src
-│   ├── harness.py          # Main test harness integrating HuggingFace pipelines
-│   ├── extraction.py       # Functions for extracting hard commitments using spaCy
-│   ├── metrics.py          # Functions for calculating Jaccard index
-│   ├── plotting.py         # Visualization functions for test results
-│   └── config.py           # Configuration settings for the project
-├── tests
-│   └── test_harness.py     # Unit tests for the harness and modules
-├── notebooks
-│   └── exploratory.ipynb    # Jupyter notebook for exploratory data analysis
-├── requirements.txt         # Project dependencies
-├── pyproject.toml          # Project configuration for packaging
-├── .gitignore               # Files and directories to ignore by Git
-└── README.md                # Project documentation
+commitment-test-harness/
+├── .github/workflows/ci.yaml       # CI/CD
+├── Dockerfile                      # Containerization
+├── README.md                       # Docs with Quickstart
+├── appendix_a_extractor.md         # Extractor spec
+├── data/canonical_corpus.json      # 20 test signals
+├── environment.yml                 # Conda env
+├── notebooks/                      # Jupyter
+├── pyproject.toml                  # Poetry config
+├── requirements.txt                # Pip deps
+├── src/
+│   ├── advanced_extractor.py       # Robust spaCy parser
+│   ├── config.py                   # Settings
+│   ├── deterministic_pipeline.py   # Full pipeline
+│   ├── extraction.py               # Basic extractor
+│   ├── harness.py                  # Original harness
+│   ├── metrics.py                  # Jaccard + extras
+│   ├── plotting.py                 # Plot functions
+│   ├── samples.py                  # Sample signals
+│   └── test_harness.py             # New end-to-end harness
+├── tests/
+│   ├── test_full_harness.py        # 10+ unit tests
+│   └── test_harness.py             # Original tests
 ```
 
 ## Quickstart (Mac)
