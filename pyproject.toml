@@ -1,0 +1,18 @@
+[tool.poetry]
+name = "commitment-test-harness"
+version = "0.1.0"
+description = "A test harness for evaluating commitment conservation in linguistic signals."
+authors = ["Your Name <your.email@example.com>"]
+license = "MIT"
+
+[tool.poetry.dependencies]
+python = "^3.8"
+transformers = "^4.0.0"
+spacy = "^3.0.0"
+matplotlib = "^3.4.0"
+numpy = "^1.21.0"
+pytest = "^6.2.0"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"

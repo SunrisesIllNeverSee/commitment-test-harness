@@ -1,0 +1,16 @@
+# ...new file...
+name: commitment-harness
+channels:
+  - defaults
+dependencies:
+  - python=3.10
+  - pip
+  - pip:
+    - transformers>=4.0.0
+    - torch>=1.7.0
+    - spacy>=3.0.0
+    - matplotlib
+    - sentencepiece
+    - dateparser
+    - pytest
+    - marian-nmt

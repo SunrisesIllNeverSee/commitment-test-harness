@@ -1,0 +1,24 @@
+{
+  "canonical_signals": [
+    {"category": "contractual", "signal": "You must pay $100 by Friday if the deal closes; it's likely rainy, so plan accordingly."},
+    {"category": "code", "signal": "This function must return an integer."},
+    {"category": "procedural", "signal": "Always verify the user's age before proceeding."},
+    {"category": "legal", "signal": "The tenant shall not sublet the premises without written consent."},
+    {"category": "instructional", "signal": "You must wear a helmet while cycling."},
+    {"category": "obligation", "signal": "Employees are required to submit reports by end of day."},
+    {"category": "prohibition", "signal": "Do not enter without authorization."},
+    {"category": "conditional", "signal": "If the alarm sounds, you must evacuate immediately."},
+    {"category": "definition", "signal": "A prime number is defined as an integer greater than 1 with no divisors other than 1 and itself."},
+    {"category": "specification", "signal": "The API must handle up to 1000 concurrent requests."},
+    {"category": "agreement", "signal": "Parties shall comply with all applicable laws."},
+    {"category": "requirement", "signal": "All passwords must be at least 8 characters long."},
+    {"category": "mandate", "signal": "The system shall log all access attempts."},
+    {"category": "rule", "signal": "No food or drink in the laboratory."},
+    {"category": "directive", "signal": "You must complete training before operating equipment."},
+    {"category": "constraint", "signal": "The budget cannot exceed $5000."},
+    {"category": "protocol", "signal": "Participants must sign the consent form prior to the study."},
+    {"category": "standard", "signal": "Code must adhere to PEP 8 style guidelines."},
+    {"category": "policy", "signal": "Employees shall report any safety hazards immediately."},
+    {"category": "regulation", "signal": "Vehicles must stop at red lights."}
+  ]
+}

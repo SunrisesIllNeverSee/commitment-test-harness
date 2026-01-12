@@ -1,0 +1,59 @@
+# ...new file...
+name: CI — tests & harness
+
+on:
+  push:
+    branches: [ main, master ]
+  pull_request:
+    branches: [ main, master ]
+
+jobs:
+  tests:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: "3.10"
+
+      - name: Cache pip
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('commitment-test-harness/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install pip dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r commitment-test-harness/requirements.txt
+
+      - name: Download spaCy model
+        run: |
+          python -m spacy download en_core_web_sm
+
+      - name: Run unit tests
+        working-directory: commitment-test-harness
+        run: |
+          pytest -q || (echo "pytest failed"; exit 1)
+
+      - name: Run harness (generate example artifacts)
+        working-directory: commitment-test-harness/src
+        env:
+          TRANSFORMER_OFFLINE: "1"
+        run: |
+          # run harness in non-blocking/demo mode to generate plots
+          python harness.py || echo "harness completed (non-zero exit allowed for heavy models)"
+
+      - name: Upload generated artifacts
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: commitment-harness-artifacts
+          path: |
+            commitment-test-harness/src/*.png
+            commitment-test-harness/src/*.json || true
