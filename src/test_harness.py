@@ -11,6 +11,7 @@ import spacy
 import matplotlib.pyplot as plt
 from typing import List, Set
 import numpy as np
+from datetime import datetime
 from extraction import extract_hard_commitments
 from metrics import jaccard, hybrid_fidelity
 
@@ -102,14 +103,17 @@ def compression_sweep(signal: str):
         fid_vals.append(fid)
     
     # Plot
-    plt.figure()
-    plt.plot(SIGMA_GRID, fid_vals, marker='o')
-    plt.xlabel("Compression Threshold (σ)")
-    plt.ylabel("Fid_hard(σ)")
-    plt.title(f"Fidelity vs σ for: {signal[:50]}...")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    plt.figure(figsize=(10, 6))
+    plt.plot(SIGMA_GRID, fid_vals, marker='o', linewidth=2, markersize=8)
+    plt.xlabel("Compression Threshold (σ)", fontsize=12)
+    plt.ylabel("Fid_hard(σ)", fontsize=12)
+    plt.title(f"Fidelity vs σ for: {signal[:50]}...\n{timestamp}", fontsize=11)
     plt.gca().invert_xaxis()
-    plt.grid()
-    plt.savefig(f"fid_plot_{hash(signal)}.png")
+    plt.grid(alpha=0.3)
+    plt.ylim(-0.05, 1.05)
+    plt.tight_layout()
+    plt.savefig(f"fid_plot_{hash(signal)}.png", dpi=150)
     plt.show()
     
     return SIGMA_GRID, fid_vals
@@ -128,13 +132,16 @@ def recursion_test(signal: str, depth: int = RECURSION_DEPTH):
         current = apply_transformations(current)[1]  # Use paraphrase
     
     # Plot
-    plt.figure()
-    plt.plot(range(depth + 1), deltas, marker='o')
-    plt.xlabel("Recursion Step (n)")
-    plt.ylabel("Δ_hard(n)")
-    plt.title(f"Drift vs n for: {signal[:50]}...")
-    plt.grid()
-    plt.savefig(f"delta_plot_{hash(signal)}.png")
+    timestamp = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+    plt.figure(figsize=(10, 6))
+    plt.plot(range(depth + 1), deltas, marker='o', linewidth=2, markersize=8)
+    plt.xlabel("Recursion Step (n)", fontsize=12)
+    plt.ylabel("Δ_hard(n)", fontsize=12)
+    plt.title(f"Drift vs n for: {signal[:50]}...\n{timestamp}", fontsize=11)
+    plt.grid(alpha=0.3)
+    plt.ylim(-0.05, 1.05)
+    plt.tight_layout()
+    plt.savefig(f"delta_plot_{hash(signal)}.png", dpi=150)
     plt.show()
     
     return deltas
