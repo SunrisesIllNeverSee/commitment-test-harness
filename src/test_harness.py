@@ -149,7 +149,8 @@ def recursion_test(signal: str, depth: int = RECURSION_DEPTH):
 if __name__ == "__main__":
     # Run on sample signals
     for signal in SAMPLE_SIGNALS:
-        print(f"Testing signal: {signal}")
+        print(f"\nTesting signal: {signal}")
         compression_sweep(signal)
-        recursion_test(signal)
-        print("Plots saved.")
+        # Skip recursion_test for now (uses slow translation models)
+        # recursion_test(signal)
+        print("Compression sweep plot saved.")
