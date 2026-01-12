@@ -60,8 +60,16 @@ def compute_intersection_commitments(signal: str) -> Set[str]:
     """Compute C_hard,op as intersection of transformed extractions."""
     transforms = apply_transformations(signal)
     all_commitments = [extract_hard_commitments(t) for t in transforms]
+    
+    # Debug output
+    print(f"\n[DEBUG] Transform commitments:")
+    for i, (t, c) in enumerate(zip(transforms, all_commitments)):
+        print(f"  Transform {i+1}: {t[:60]}... -> {len(c)} commitments: {c}")
+    
     if all_commitments:
-        return set.intersection(*all_commitments)
+        intersection = set.intersection(*all_commitments)
+        print(f"  Intersection: {intersection}")
+        return intersection
     return set()
 
 def jaccard(a: Set[str], b: Set[str]) -> float:
@@ -74,10 +82,11 @@ def jaccard(a: Set[str], b: Set[str]) -> float:
 
 def compression_sweep(signal: str):
     """Test Prediction 1: Compression invariance."""
-    base = compute_intersection_commitments(signal)
+    # Use original signal commitments as base, not intersection
+    base = extract_hard_commitments(signal)
     print(f"\n{'='*80}")
     print(f"Testing signal: {signal}")
-    print(f"Base commitments: {base}")
+    print(f"Base commitments (from original): {base}")
     print(f"{'='*80}")
     fid_vals = []
     for sigma in SIGMA_GRID:
@@ -102,7 +111,8 @@ def compression_sweep(signal: str):
 
 def recursion_test(signal: str, depth: int = RECURSION_DEPTH):
     """Test Prediction 2: Recursive drift."""
-    base = compute_intersection_commitments(signal)
+    # Use original signal commitments as base
+    base = extract_hard_commitments(signal)
     deltas = []
     current = signal
     for n in range(depth + 1):
