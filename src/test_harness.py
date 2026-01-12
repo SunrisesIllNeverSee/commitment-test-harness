@@ -37,9 +37,14 @@ def extract_hard_commitments(text: str) -> Set[str]:
     doc = nlp(text)
     commitments = set()
     for sent in doc.sents:
-        sent_text = sent.text.lower()
-        if any(modal in sent_text for modal in ["must", "shall", "cannot", "required"]):
-            commitments.add(sent.text.strip())
+        # Split on semicolons to handle multiple clauses in one sentence
+        clauses = [c.strip() for c in sent.text.split(';')]
+        for clause in clauses:
+            clause_lower = clause.lower()
+            if any(modal in clause_lower for modal in ["must", "shall", "cannot", "required"]):
+                # Normalize: strip trailing punctuation, extra spaces
+                normalized = clause.strip().rstrip('.!?').strip()
+                commitments.add(normalized)
     return commitments
 
 def apply_transformations(signal: str) -> List[str]:
