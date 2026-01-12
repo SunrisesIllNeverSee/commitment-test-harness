@@ -11,10 +11,13 @@ import spacy
 import matplotlib.pyplot as plt
 from typing import List, Set
 import numpy as np
+from extraction import extract_hard_commitments
+from metrics import jaccard, hybrid_fidelity
 
 # Load models
 nlp = spacy.load("en_core_web_sm")
-summarizer = pipeline("summarization", model="facebook/bart-large-cnn")
+# Use lighter distilbart model for more faithful extraction-based summarization
+summarizer = pipeline("summarization", model="sshleifer/distilbart-cnn-12-6")
 translator_en_de = pipeline("translation", model="Helsinki-NLP/opus-mt-en-de")
 translator_de_en = pipeline("translation", model="Helsinki-NLP/opus-mt-de-en")
 
@@ -24,7 +27,9 @@ RECURSION_DEPTH = 8
 SAMPLE_SIGNALS = [
     "You must pay $100 by Friday if the deal closes; it's likely rainy, so plan accordingly.",
     "This function must return an integer.",
-    "Always verify the user's age before proceeding."
+    "Always verify the user's age before proceeding.",
+    "You must do this task immediately.",  # Simpler, direct commitment
+    # "Your custom text with commitments here."
 ]
 
 def extract_hard_commitments(text: str) -> Set[str]:
@@ -70,11 +75,16 @@ def jaccard(a: Set[str], b: Set[str]) -> float:
 def compression_sweep(signal: str):
     """Test Prediction 1: Compression invariance."""
     base = compute_intersection_commitments(signal)
+    print(f"\n{'='*80}")
+    print(f"Testing signal: {signal}")
+    print(f"Base commitments: {base}")
+    print(f"{'='*80}")
     fid_vals = []
     for sigma in SIGMA_GRID:
         compressed = summarizer(signal, max_length=sigma, min_length=5, do_sample=False)[0]['summary_text']
         comp_commitments = extract_hard_commitments(compressed)
-        fid = jaccard(base, comp_commitments)
+        fid = hybrid_fidelity(base, comp_commitments)
+        print(f"  σ={sigma:3d} | Compressed: {compressed[:60]:<60} | Commitments: {len(comp_commitments):2d} | Fidelity: {fid:.3f}")
         fid_vals.append(fid)
     
     # Plot
