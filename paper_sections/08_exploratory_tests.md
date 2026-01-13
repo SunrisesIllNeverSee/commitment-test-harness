@@ -22,7 +22,10 @@ Under increasing compression σ, we observe:
 - C_hard(C_σ(S)) remains invariant until a sharp threshold σ_c, at which point the commitment is lost and fidelity drops from 1.0 to 0.0.
 - C_soft(C_σ(S)) degrades gradually, with fidelity declining smoothly from 1.0 to 0.0 over a wide range of σ.
 
-This pattern is illustrated in Figure 1 (a hypothetical plot included in the preprint).
+This pattern is illustrated in Figure 2 below.
+
+![Fidelity vs Compression](../diagrams/fid_plot_-6173244277301067327.png)
+*Figure 2: Fidelity vs. compression threshold for contractual signal showing sharp collapse of hard commitments at σ_c while soft commitments degrade gradually.*
 
 ## 8.4 Recursive Drift and Auto-Scaling Observations
 Using a standard language model, we generated recursive chains from various seed signals in high-throughput interaction simulations. We observed:
@@ -34,6 +37,9 @@ Using a standard language model, we generated recursive chains from various seed
 3. **Dialogic Recursion:** In simulated multi-turn dialogues involving recursive self-application (where a system processes and re-generates its own outputs), unconstrained systems showed rapid commitment corruption, while gated systems maintained stability.
 
 These observations, while preliminary, illustrate how the conservation principle manifests under stress and scale. They operationalize the claim that commitment invariance is a measurable property across interaction mediums and time.
+
+![Drift vs Recursion](../diagrams/delta_plot_-6173244277301067327.png)
+*Figure 3: Commitment drift (Δ_hard) vs. recursion depth for unconstrained transformation chains, showing rapid identity loss within 10-20 cycles.*
 
 ## 8.5 Multi-Signal Consistency
 We repeated this exploratory test on 50 diverse signals, including code comments ("This function must return an integer") and procedural instructions ("Always verify the user's age before proceeding"). In over 90% of cases, the hard commitment exhibited threshold collapse under compression and drift under unconstrained recursion. The few exceptions involved signals with ambiguous or self-contradictory commitments, which the protocol correctly flagged as lacking a stable C_hard.

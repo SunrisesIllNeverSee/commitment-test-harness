@@ -5,6 +5,9 @@ Loss-inducing transformations are unavoidable in language systems operating unde
 
 If a signal possesses a well-defined commitment structure, that structure should persist under compression until the point of semantic collapse. Conversely, information not contributing to commitment should degrade preferentially as compression increases.
 
+![Shannon Commitment Chain](../diagrams/fig1_shannon_commitment_chain.tex)
+*Figure 1: Transformation-stable communication system showing Shannon's channel model extended with commitment kernel (invariant structure), compression gate, and recursive feedback loop. The commitment kernel persists through lossy transforms in the diagnostic regime.*
+
 ## 5.2 Compression Operators
 Let C_σ : S → S denote a compression operator parameterized by a threshold σ, where increasing σ corresponds to more aggressive information removal. Compression may merge, abstract, or discard components of a signal without regard to semantic interpretation.
 
