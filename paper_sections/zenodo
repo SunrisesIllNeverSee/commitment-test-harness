@@ -1,0 +1,535 @@
+{
+  "access": {
+    "embargo": {
+      "active": false,
+      "reason": null
+    },
+    "files": "public",
+    "record": "public",
+    "status": "open"
+  },
+  "created": "2026-01-16T11:40:38.622463+00:00",
+  "custom_fields": {
+    "code:codeRepository": "https://github.com/SunrisesIllNeverSee/commitment-test-harness/tree/main/paper_sections",
+    "code:developmentStatus": {
+      "id": "active",
+      "title": {
+        "en": "Active"
+      }
+    }
+  },
+  "deletion_status": {
+    "is_deleted": false,
+    "status": "P"
+  },
+  "files": {
+    "count": 14,
+    "enabled": true,
+    "entries": {
+      "00_header.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8075384183f854b89fb8a10976714b19",
+        "ext": "md",
+        "id": "86a093c9-b8a5-47f3-82be-d48abd2b5bfe",
+        "key": "00_header.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/00_header.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/00_header.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 2436,
+        "storage_class": "L"
+      },
+      "01_introduction.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:6c335c4334f0fdbbb6a8d3c553235d56",
+        "ext": "md",
+        "id": "0cc66673-f11a-49c9-87e4-36a7a1d8026f",
+        "key": "01_introduction.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/01_introduction.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/01_introduction.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 4879,
+        "storage_class": "L"
+      },
+      "02_related_work.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:2381ebbda82af22c187a3da5d9f43310",
+        "ext": "md",
+        "id": "834887aa-8011-405f-8752-8e1ffece4c4b",
+        "key": "02_related_work.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/02_related_work.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/02_related_work.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 5069,
+        "storage_class": "L"
+      },
+      "03_preliminaries_definitions.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:57abe1dc3899953a61a82556d5ac02fc",
+        "ext": "md",
+        "id": "75dfb5bb-c6df-42c1-b36c-e5375605b9f9",
+        "key": "03_preliminaries_definitions.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/03_preliminaries_definitions.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/03_preliminaries_definitions.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 13773,
+        "storage_class": "L"
+      },
+      "04_falsification_protocol.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:089609ebbfdb4bb8ee2d80f06f6a72a9",
+        "ext": "md",
+        "id": "b2b6ffe2-0e44-49f8-a4b2-c41cb2c6b1f4",
+        "key": "04_falsification_protocol.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/04_falsification_protocol.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/04_falsification_protocol.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 9670,
+        "storage_class": "L"
+      },
+      "05_compression_conservation.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:123748500c1bca6d381ae0d848553904",
+        "ext": "md",
+        "id": "d50cb006-64c3-4d03-b96a-05975778bcbf",
+        "key": "05_compression_conservation.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/05_compression_conservation.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/05_compression_conservation.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 4138,
+        "storage_class": "L"
+      },
+      "06_recursive_application.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:e1b3b65bd91e4bb60818125a5caab958",
+        "ext": "md",
+        "id": "92969000-86e9-4f4a-a920-66590ffb0f2d",
+        "key": "06_recursive_application.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/06_recursive_application.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/06_recursive_application.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 3754,
+        "storage_class": "L"
+      },
+      "07_enforcement_architecture.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:1d818b16777764d6db77902dbcfd46fa",
+        "ext": "md",
+        "id": "15c5ed67-edab-4648-abab-e4e39b9da1d2",
+        "key": "07_enforcement_architecture.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/07_enforcement_architecture.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/07_enforcement_architecture.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 8590,
+        "storage_class": "L"
+      },
+      "08_exploratory_tests.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:4c06f9aba35396392fa7d18a60f0ce0a",
+        "ext": "md",
+        "id": "7122cdac-4362-4b8a-b78d-7f377294d5ed",
+        "key": "08_exploratory_tests.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/08_exploratory_tests.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/08_exploratory_tests.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 7473,
+        "storage_class": "L"
+      },
+      "09_falsification_invitation.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8faf70e1eaaafc09eb4fd926c1456295",
+        "ext": "md",
+        "id": "e8fcf68e-bb94-42c2-b415-4c199c28d4e6",
+        "key": "09_falsification_invitation.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/09_falsification_invitation.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/09_falsification_invitation.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 5371,
+        "storage_class": "L"
+      },
+      "10_conclusion.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:b25dfac6aa46681b43dae36c65486529",
+        "ext": "md",
+        "id": "08fa197e-7307-4768-aa7c-2c19ce2c8cce",
+        "key": "10_conclusion.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/10_conclusion.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/10_conclusion.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 3255,
+        "storage_class": "L"
+      },
+      "11_ip_disclosure.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:0f64fef98bacf06f718fad586a1200b9",
+        "ext": "md",
+        "id": "e67a28ef-479b-49b9-a5d3-f3d6153c9a91",
+        "key": "11_ip_disclosure.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/11_ip_disclosure.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/11_ip_disclosure.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 457,
+        "storage_class": "L"
+      },
+      "12_references.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:f78ed0397e68502997a0462180f9b85c",
+        "ext": "md",
+        "id": "1227a742-3cc4-4f60-9112-fed071930026",
+        "key": "12_references.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/12_references.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/12_references.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 2009,
+        "storage_class": "L"
+      },
+      "README.md": {
+        "access": {
+          "hidden": false
+        },
+        "checksum": "md5:8add1d3139d956aa2e85aca70e52376e",
+        "ext": "md",
+        "id": "2b2f6cb4-ea29-412e-9246-717d30081dc3",
+        "key": "README.md",
+        "links": {
+          "content": "https://zenodo.org/api/records/18267279/files/README.md/content",
+          "self": "https://zenodo.org/api/records/18267279/files/README.md"
+        },
+        "metadata": {},
+        "mimetype": "application/octet-stream",
+        "size": 1196,
+        "storage_class": "L"
+      }
+    },
+    "order": [],
+    "total_bytes": 72070
+  },
+  "id": "18267279",
+  "is_draft": false,
+  "is_published": true,
+  "links": {
+    "access": "https://zenodo.org/api/records/18267279/access",
+    "access_grants": "https://zenodo.org/api/records/18267279/access/grants",
+    "access_links": "https://zenodo.org/api/records/18267279/access/links",
+    "access_request": "https://zenodo.org/api/records/18267279/access/request",
+    "access_users": "https://zenodo.org/api/records/18267279/access/users",
+    "archive": "https://zenodo.org/api/records/18267279/files-archive",
+    "archive_media": "https://zenodo.org/api/records/18267279/media-files-archive",
+    "communities": "https://zenodo.org/api/records/18267279/communities",
+    "communities-suggestions": "https://zenodo.org/api/records/18267279/communities-suggestions",
+    "doi": "https://doi.org/10.5281/zenodo.18267279",
+    "draft": "https://zenodo.org/api/records/18267279/draft",
+    "file_modification": "https://zenodo.org/api/records/18267279/file-modification",
+    "files": "https://zenodo.org/api/records/18267279/files",
+    "latest": "https://zenodo.org/api/records/18267279/versions/latest",
+    "latest_html": "https://zenodo.org/records/18267279/latest",
+    "media_files": "https://zenodo.org/api/records/18267279/media-files",
+    "parent": "https://zenodo.org/api/records/18267278",
+    "parent_doi": "https://doi.org/10.5281/zenodo.18267278",
+    "parent_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18267278",
+    "parent_html": "https://zenodo.org/records/18267278",
+    "preview_html": "https://zenodo.org/records/18267279?preview=1",
+    "request_deletion": "https://zenodo.org/api/records/18267279/request-deletion",
+    "requests": "https://zenodo.org/api/records/18267279/requests",
+    "reserve_doi": "https://zenodo.org/api/records/18267279/draft/pids/doi",
+    "self": "https://zenodo.org/api/records/18267279",
+    "self_doi": "https://doi.org/10.5281/zenodo.18267279",
+    "self_doi_html": "https://zenodo.org/doi/10.5281/zenodo.18267279",
+    "self_html": "https://zenodo.org/records/18267279",
+    "self_iiif_manifest": "https://zenodo.org/api/iiif/record:18267279/manifest",
+    "self_iiif_sequence": "https://zenodo.org/api/iiif/record:18267279/sequence/default",
+    "versions": "https://zenodo.org/api/records/18267279/versions"
+  },
+  "media_files": {
+    "count": 0,
+    "enabled": false,
+    "entries": {},
+    "order": [],
+    "total_bytes": 0
+  },
+  "metadata": {
+    "copyright": "Copyright (C) Ello Cello LLC. All Rights Reserved. MO\u00a7ES\u2122",
+    "creators": [
+      {
+        "person_or_org": {
+          "family_name": "McHenry",
+          "given_name": "Deric J.",
+          "identifiers": [
+            {
+              "identifier": "0009-0002-9904-5390",
+              "scheme": "orcid"
+            }
+          ],
+          "name": "McHenry, Deric J.",
+          "type": "personal"
+        },
+        "role": {
+          "id": "researcher",
+          "title": {
+            "de": "WissenschaftlerIn",
+            "en": "Researcher"
+          }
+        }
+      }
+    ],
+    "dates": [
+      {
+        "date": "2026-01-12",
+        "description": "Initial public disclosure of the commitment conservation law",
+        "type": {
+          "id": "created",
+          "title": {
+            "de": "Erstellt",
+            "en": "Created"
+          }
+        }
+      }
+    ],
+    "description": "<p>This repository introduces <em>a conservation law for commitment in language under transformative compression and recursive application</em>. We formalize commitment as an information-bearing invariant that must be preserved across paraphrase, summarization, and iterative reuse, even as surface form and representation change.</p>\n<p>We propose a falsifiability framework that operationalizes this invariant using compression-based stress tests and lineage-aware evaluation, distinguishing semantic preservation from mere token retention. The framework is designed to be model-agnostic and applicable to both human and machine-generated language.</p>\n<p>This disclosure presents the theoretical law, evaluation criteria, and architectural relationships. Implementation mechanisms are outside the scope of this paper.</p>",
+    "publication_date": "2026-01-12",
+    "publisher": "Zenodo",
+    "references": [
+      {
+        "reference": "Shannon, C. E. (1948). A mathematical theory of communication. Bell System Technical Journal, 27(3), 379-423"
+      },
+      {
+        "reference": "Turing, A. M. (1936). On computable numbers, with an application to the Entscheidungsproblem. Proceedings of the London Mathematical Society, s2-42(1), 230-265."
+      },
+      {
+        "reference": "Schmidhuber, J. (2008). Driven by Compression Progress: A Simple Principle Explains Essential Aspects of Subjective Beauty, Novelty, Surprise, Interestingness, Attention, Curiosity, Creativity, Art, Science, Music, Jokes."
+      },
+      {
+        "reference": "Goertzel, B., et al. (2014). A cognitive architecture based on cognitive synergy."
+      },
+      {
+        "reference": "Looks, M. (2006). Meta-optimizing semantic evolutionary search."
+      },
+      {
+        "reference": "Looks, M. (2009). Scalable meta-optimization: A case study with the distributed hierarchical genetic algorithm."
+      },
+      {
+        "reference": "Corr\u00eaa, C., Schmid, P., Goyal, K., Kim, J., et al. (2025). Iterative Deployment Improves Planning Skills in LLMs. arXiv preprint arXiv:2512.24940."
+      },
+      {
+        "reference": "Xie, Z., Ma, Y., Zhou, Y., et al. (2025). mHC: Manifold-Constrained Hyper-Connections for Stable Scaling. arXiv preprint arXiv:2512.24880."
+      },
+      {
+        "reference": "Chang, E. (2025). The Missing Layer of AGI: From Pattern Alchemy to Coordination Physics. arXiv preprint arXiv:2512.05765."
+      },
+      {
+        "reference": "Zhang, H., Liu, A., et al. (2025). Recursive Language Models. arXiv preprint arXiv:2512.24601."
+      },
+      {
+        "reference": "Guo, D., Yang, D., Zhang, H., et al. (2025). DeepSeek-R1: Incentivizing Reasoning Capability in LLMs via Reinforcement Learning. arXiv preprint arXiv:2501.12948."
+      },
+      {
+        "reference": "Chen, Z., Wang, H., Li, T., et al. (2026). SimpleMem: A Simple Memory Mechanism with Structured Compression for Long-Context Language Agents. arXiv preprint arXiv:2601.02553."
+      },
+      {
+        "reference": "Park, J. S., O'Brien, J. C., Cai, C. J., et al. (2023). Generative Agents: Interactive Simulacra of Human Behavior. Proceedings of the 36th Annual ACM Symposium on User Interface Software and Technology, 1\u201322."
+      },
+      {
+        "reference": "Bai, Y., Kadavath, S., Kundu, S., et al. (2022). Constitutional AI: Harmlessness from AI Feedback. arXiv preprint arXiv:2212.08073."
+      }
+    ],
+    "resource_type": {
+      "id": "publication-preprint",
+      "title": {
+        "de": "Preprint",
+        "en": "Preprint"
+      }
+    },
+    "rights": [
+      {
+        "description": {
+          "en": "The Creative Commons Attribution license allows re-distribution and re-use of a licensed work on the condition that the creator is appropriately credited."
+        },
+        "icon": "cc-by-icon",
+        "id": "cc-by-4.0",
+        "props": {
+          "scheme": "spdx",
+          "url": "https://creativecommons.org/licenses/by/4.0/legalcode"
+        },
+        "title": {
+          "en": "Creative Commons Attribution 4.0 International"
+        }
+      }
+    ],
+    "subjects": [
+      {
+        "subject": "artificial intelligence"
+      },
+      {
+        "subject": "Information Theory"
+      },
+      {
+        "subject": "computer science"
+      },
+      {
+        "subject": "Computation and Language"
+      },
+      {
+        "subject": "conservation law"
+      },
+      {
+        "subject": "LLM"
+      },
+      {
+        "subject": "Language Models"
+      },
+      {
+        "subject": "Semantic preservation"
+      },
+      {
+        "subject": "Compression"
+      },
+      {
+        "subject": "Recursion"
+      },
+      {
+        "subject": "Commitment"
+      },
+      {
+        "subject": "Falsiability"
+      },
+      {
+        "subject": "Machine learning"
+      },
+      {
+        "subject": "Computational linguistics"
+      },
+      {
+        "subject": "Machine Learning Theory"
+      },
+      {
+        "subject": "Information Theory"
+      }
+    ],
+    "title": "A Conservation Law for Commitment in Language Under Transformative Compression and Recursive Application",
+    "version": "V.1-preprint (Law Disclosure)"
+  },
+  "parent": {
+    "access": {
+      "grants": [],
+      "links": [],
+      "owned_by": {
+        "user": "1517568"
+      },
+      "settings": {
+        "accept_conditions_text": null,
+        "allow_guest_requests": false,
+        "allow_user_requests": false,
+        "secret_link_expiration": 0
+      }
+    },
+    "communities": {},
+    "id": "18267278",
+    "pids": {
+      "doi": {
+        "client": "datacite",
+        "identifier": "10.5281/zenodo.18267278",
+        "provider": "datacite"
+      }
+    }
+  },
+  "pids": {
+    "doi": {
+      "client": "datacite",
+      "identifier": "10.5281/zenodo.18267279",
+      "provider": "datacite"
+    },
+    "oai": {
+      "identifier": "oai:zenodo.org:18267279",
+      "provider": "oai"
+    }
+  },
+  "revision_id": 3,
+  "stats": {
+    "all_versions": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 1,
+      "views": 1
+    },
+    "this_version": {
+      "data_volume": 0.0,
+      "downloads": 0,
+      "unique_downloads": 0,
+      "unique_views": 1,
+      "views": 1
+    }
+  },
+  "status": "published",
+  "swh": {},
+  "updated": "2026-01-16T11:40:39.916176+00:00",
+  "versions": {
+    "index": 1,
+    "is_latest": true,
+    "is_latest_draft": true
+  }
+}
