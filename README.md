@@ -1,5 +1,11 @@
 # Commitment Test Harness
 
+> **ARCHIVED — May 2026**
+> This repo is preserved as a historical reference. The active harness and experiments now live in [commitment-conservation](https://github.com/SunrisesIllNeverSee/commitment-conservation).
+> Contains the original prototype, canonical corpus, paper sections, diagrams, and test suite that preceded the published preprint.
+
+---
+
 **Research-grade prototype for testing commitment conservation under compression and recursion.**
 
 This repository contains a prototype implementation of the falsification protocol described in *"A Conservation Law for Commitment in Language Under Transformative Compression and Recursive Application"* (McHenry, 2026). It tests the hypothesis that linguistic signals contain a conserved structure—**hard commitments**—that remains invariant under lossy compression until a sharp collapse threshold, and that degrades under recursive application without enforcement constraints.
