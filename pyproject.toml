@@ -5,6 +5,8 @@ description = "A test harness for evaluating commitment conservation in linguist
 authors = ["Your Name <your.email@example.com>"]
 license = "MIT"
 
+packages = [{ include = "src" }]
+
 [tool.poetry.dependencies]
 python = "^3.8"
 transformers = "^4.0.0"

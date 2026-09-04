@@ -1,10 +1,10 @@
 # ...new file...
 import os
 from transformers import pipeline
-from extraction import extract_hard
-from metrics import fid_hard, delta_hard
-from plotting import plot_fid, plot_delta
-import config
+from .extraction import extract_hard
+from .metrics import fid_hard, delta_hard
+from .plotting import plot_fid, plot_delta
+from . import config
 
 # initialize deterministic pipelines (no sampling)
 SUMMARIZER = pipeline("summarization", model="facebook/bart-large-cnn", framework="pt", device=-1)
