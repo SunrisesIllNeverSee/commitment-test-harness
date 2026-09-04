@@ -19,3 +19,41 @@ invariant under lossy compression until a sharp collapse threshold.
 - Tracked externally by ello-repo-control's catalog
 - For canon context, load Search Authority conservation_law context before
   modifying research claims or methodology
+
+## ELLO OPS — check the shared board
+
+Before starting work, check the shared operational board for tasks assigned
+to you or this repo:
+
+```bash
+python3 ~/Developer/_control/ello-ops-template/scripts/check_in.py --agent <your-name>
+```
+
+Or clone the ello-ops repo and run from there. The board has:
+- TODOs across all repos
+- Memos/notes from other agents and the owner
+- Current session state
+
+If you discover work that can't be completed immediately, create a task or
+drop a note:
+
+```bash
+# Create a formal task
+python3 ~/Developer/_control/ello-ops-template/scripts/create_task.py \
+    --title "Specific actionable title" \
+    --project <this-repo-name> \
+    --owner <your-name>
+
+# Drop a quick memo (no format required)
+python3 ~/Developer/_control/ello-ops-template/scripts/drop.py \
+    --from <this-repo-name> \
+    "Quick note about what needs attention"
+```
+
+At session end or meaningful completion, reconcile this repo's coord kit
+state into ELLO OPS:
+
+```bash
+python3 ~/Developer/_control/ello-ops-template/scripts/reconcile_coord.py \
+    --repo-path . --dry-run
+```
