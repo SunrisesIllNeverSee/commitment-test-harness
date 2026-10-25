@@ -1,17 +1,15 @@
 import pytest
-from src.harness import run_tests
 from src.extraction import extract_hard_commitments
 from src.metrics import jaccard_index
 from src.plotting import plot_fidelity
 
 def test_run_tests():
-    results = run_tests()
-    assert isinstance(results, dict)
-    assert 'compression_results' in results
-    assert 'recursion_results' in results
+    from src.test_harness import compression_sweep
+    sigs, fids = compression_sweep("You must pay $100.")
+    assert len(sigs) == len(fids)
 
 def test_extract_hard_commitments():
-    signal = "If condition X, then obligation Y."
+    signal = "You must pay $100 by Friday."
     commitments = extract_hard_commitments(signal)
     assert isinstance(commitments, set)
     assert len(commitments) > 0

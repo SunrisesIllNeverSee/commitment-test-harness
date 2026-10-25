@@ -12,8 +12,8 @@ import matplotlib.pyplot as plt
 from typing import List, Set
 import numpy as np
 from datetime import datetime
-from extraction import extract_hard_commitments
-from metrics import jaccard, hybrid_fidelity
+from .extraction import extract_hard_commitments
+from .metrics import jaccard, hybrid_fidelity
 
 # Load models
 nlp = spacy.load("en_core_web_sm")

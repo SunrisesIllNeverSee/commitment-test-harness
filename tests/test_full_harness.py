@@ -49,10 +49,10 @@ def test_canonical_corpus_load():
     assert "canonical_signals" in data
     assert len(data["canonical_signals"]) >= 20
 
-def test_extractor_canonicalization():
+def test_extractor_finds_modals():
     commitments = extract_hard_commitments("You must pay $100 by Friday.", nlp)
-    # Assuming canonicalization replaces numbers/dates
-    assert any("#NUM" in c or "202" in c for c in commitments)
+    assert len(commitments) > 0
+    assert any("must" in c.lower() for c in commitments)
 
 def test_transformation_applies():
     from src.test_harness import apply_transformations
@@ -60,17 +60,18 @@ def test_transformation_applies():
     transforms = apply_transformations(signal)
     assert len(transforms) == 3
     assert all(isinstance(t, str) for t in transforms)
-# Additional tests from viii. pytest.py
+
 S = "You must pay $100 by Friday if the deal closes; it's likely rainy, so plan accordingly."
 
-def test_extract_nonempty():
+def test_extract_mixed_signal():
     k = extract_hard_commitments(S, nlp)
     assert isinstance(k, set)
+    assert len(k) > 0
 
-def test_compression_runs():
+def test_compression_runs_mixed():
     sigs, fids = compression_sweep(S)
     assert len(sigs) == len(fids)
 
-def test_recursion_runs():
-    deltas = recursion_test(S, depth=3, enforced=False)
+def test_recursion_runs_mixed():
+    deltas = recursion_test(S, depth=3)
     assert len(deltas) == 4

@@ -1,0 +1,9 @@
+standard_name: ello-repo-standard
+version: "1.0.0"
+source: ello-repo-control/standard/versions/1.0.0
+package_hash: a370327a1c59f304bca753f8d72fdeca9010b57709b2e79dd2d9879d62d53cab
+install_date: 2026-08-27
+installed_profile: product
+mode: migrate
+local_overrides: ["allowed_root_dirs_extra:  []"]
+compatibility_status: current

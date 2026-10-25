@@ -1,6 +1,6 @@
 from transformers import pipeline
 import spacy
-from metrics import jaccard_index
+from .metrics import jaccard_index
 import matplotlib.pyplot as plt
 
 def run_tests(signal, compression_thresholds):
